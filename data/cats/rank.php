@@ -11,8 +11,8 @@ $_SESSION['app'] = 'COTD';
 // Change ranking order here
 $_SESSION['ranks'] = array( 
     'adelaide',
-    'canberra',
     'melbourne',
+    'canberra',
     'auckland',
     'wellington',    
     'sydney',
