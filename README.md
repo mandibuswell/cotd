@@ -28,7 +28,6 @@ An example entry is as follows:
 
 # AB Deployment Example
 
-<<<<<<< HEAD
 To demonstrate AB deployments try the following:
 
 ## Setup Environment
