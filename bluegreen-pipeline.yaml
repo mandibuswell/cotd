@@ -1,0 +1,104 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  name: bluegreen-pipeline
+  namespace: my-project
+  labels:
+    app: bluegreen-pipeline
+    name: bluegreen-pipeline
+  annotations:
+    pipeline.alpha.openshift.io/uses: '[{"name": "bluegreen", "namespace": "", "kind": "DeploymentConfig"}]'
+spec:
+  triggers:
+    - type: GitHub
+      github:
+        secret: secret101
+    - type: Generic
+      generic:
+        secret: secret101
+  runPolicy: Serial
+  source:
+    type: None
+  strategy:
+    type: JenkinsPipeline
+    jenkinsPipelineStrategy:
+      jenkinsfile: |
+        #!groovy
+        def appName="main"
+        def tag="blue"
+        def altTag="green"        
+
+        node {
+          def project = getProjectName()
+          
+          stage("Initialize") {
+            /* Inialization Stage does the following
+             - get current route to determine the active application version ie: blue or green
+               the active application is referenced as altTag, the new application is referenced as tag
+             - get current route to determine the URL for accessing the service
+             */
+            sh "oc get route ${appName} -n ${project} -o jsonpath='{ .spec.to.name }' > activeservice"
+            activeService = readFile('activeservice').trim()
+            if (activeService == "blue") {
+              tag = "green"
+              altTag = "blue"
+            }
+            sh "oc get route ${tag} -n ${project} -o jsonpath='{ .spec.host }' > routehost"
+            routeHost = readFile('routehost').trim()
+            sh "oc get route main -n ${project} -o jsonpath='{ .spec.host }' > routehost"
+            routeHostMain = readFile('routehost').trim()
+          }
+
+          stage("Build") {
+          // The build stage will build a new image for the 'tag' application or application to be tested
+            echo "building tag ${tag}"
+            openshiftBuild buildConfig: "${tag}", showBuildLogs: "true"
+          }
+
+          stage("Deploy Test") {
+          // The Deploy Test stage will verify that the deployment of the new build of the 'tag' application has completed successfully
+            openshiftTag srcStream: "${tag}", srcTag: 'latest', destinationStream: "${tag}", destinationTag: 'latest'
+            openshiftVerifyDeployment deploymentConfig: "${tag}"
+          }
+
+          stage("Test") {
+          // The Test stage simply asks the user to confirm it is OK to change the service route over to the 'tag' application
+            input message: "Build of ${tag} is ready, select OK to route this build to ${routeHostMain} for testing.", id: "approval", ok: "Ok"
+          }
+
+          stage("Go Live") {
+          // The Go Live stage patches the 'main' route or application URL over the  the 'tag' applicatoin in order to allow the user to test the 'tag' application
+            def patch1 = $/oc patch route/main -p $'{\"spec\":{\"to\":{\"name\":\"${tag}\"}}}$' -n ${project}/$
+            sh patch1
+          }
+
+          stage("Rollback") {
+          /* The Rollback stage prompts the user whether the user would like to revert the main route to the 'altTag' application or not and 
+          therefore keeping the 'tag' application in place
+          */
+            sh "oc get route ${altTag} -n ${project} -o jsonpath='{ .spec.host }' > routehost"
+            routeHost = readFile('routehost').trim()
+            def patch2 = $/oc patch route/main -p $'{\"spec\":{\"to\":{\"name\":\"${altTag}\"}}}$' -n ${project}/$            
+            try {
+              input message: "Would you like Keep ${tag} or Abort to rollback the deployment to ${altTag} ? ", id: "approval", ok: "Keep"
+              echo "keeping ${tag}"
+            } catch (error) {
+              echo "rolling back to ${altTag}"
+              sh patch2
+            }
+          }
+        }
+
+        def getProjectName(){
+            def cmd1 = $/project=$(oc get project -o name);echo $${project##project*/} > projectName/$
+            sh cmd1
+            name = readFile('projectName').trim()
+            sh 'rm projectName'
+            return name
+        }
+  output: {}
+  resources: {}
+  postCommit: {}
+  nodeSelector: null
+status:
+  lastVersion: 0
