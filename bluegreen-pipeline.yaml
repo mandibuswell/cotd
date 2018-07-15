@@ -25,8 +25,8 @@ spec:
       jenkinsfile: |
         #!groovy
         def appName="main"
-        def tag="blue"
-        def altTag="green"        
+        def tag="my-application"
+        def altTag="my-application-cities"        
 
         node {
           def project = getProjectName()
@@ -39,9 +39,9 @@ spec:
              */
             sh "oc get route ${appName} -n ${project} -o jsonpath='{ .spec.to.name }' > activeservice"
             activeService = readFile('activeservice').trim()
-            if (activeService == "blue") {
-              tag = "green"
-              altTag = "blue"
+            if (activeService == "my-application") {
+              tag = "my-application-cities"
+              altTag = "my-application"
             }
             sh "oc get route ${tag} -n ${project} -o jsonpath='{ .spec.host }' > routehost"
             routeHost = readFile('routehost').trim()
