@@ -24,7 +24,7 @@ spec:
     jenkinsPipelineStrategy:
       jenkinsfile: |
         #!groovy
-        def appName="my-application-prod"
+        def appName="main"
         def tag="my-application"
         def altTag="my-application-cities"        
 
