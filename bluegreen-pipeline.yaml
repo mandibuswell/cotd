@@ -2,7 +2,7 @@ apiVersion: v1
 kind: BuildConfig
 metadata:
   name: bluegreen-pipeline
-  namespace: my-project
+  namespace: mandis-demo
   labels:
     app: bluegreen-pipeline
     name: bluegreen-pipeline
