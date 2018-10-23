@@ -35,7 +35,7 @@ else {
 }
 $_SESSION['name'] = $item;
 
-// Get index of current item
+// Get index of the current item
 $itemno = 0;
 for ( $i=0; $i < sizeof($_SESSION['item']); $i++ ) {
 	if ($item == $_SESSION['item'][$i]['name'] ) { 
