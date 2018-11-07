@@ -110,13 +110,6 @@ $_SESSION['item'][$i]['rank'] = 14;
 $_SESSION['item'][$i]['trivia'] = "Hi, my name is Milky. My mother loves me. I mean she really loves me. Really, really loves me.Like me so I can find some space."; 
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/milky.jpg';
 
-$i = 14;
-$_SESSION['item'][$i]['name'] = 'clanct';
-$_SESSION['item'][$i]['caption'] = 'Clancy'; 
-$_SESSION['item'][$i]['rank'] = 15;
-$_SESSION['item'][$i]['trivia'] = "Hi, my name is Clancy. Santa's little helper. They promise you a rewarding job with international travel. But they don't mention the dangerous working conditions. Like me if you care about OH&S."; 
-$_SESSION['item'][$i]['filename'] = 'data/images/pets/clancy.jpg';
-
 $i = 15;
 $_SESSION['item'][$i]['name'] = 'cookie';
 $_SESSION['item'][$i]['caption'] = 'Cookie'; 
@@ -145,10 +138,10 @@ $_SESSION['item'][$i]['rank'] = 19;
 $_SESSION['item'][$i]['trivia'] = "Hi, my name is Riki. Voting is not compulsory. But consider the consequences when you don't bother. Go on, toss me a few likes. Like me and peace out.";
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/riki.jpg';
 
-$i = 19;
+$i = 14;
 $_SESSION['item'][$i]['name'] = 'billy_2';
 $_SESSION['item'][$i]['caption'] = 'Billy';
-$_SESSION['item'][$i]['rank'] = 20;
+$_SESSION['item'][$i]['rank'] = 14;
 $_SESSION['item'][$i]['trivia'] = "Hi, my name is Billy. Frankly the notion that my photo page is being dynamically generated using PHP leaves me speechless. Like where is the error handling, and as for transaction management, well, hum bug. Like me so we can get a real Developer.";
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/billy_2.jpg';
 
