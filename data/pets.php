@@ -86,7 +86,7 @@ $i = 10;
 $_SESSION['item'][$i]['name'] = 'pippa';
 $_SESSION['item'][$i]['caption'] = 'Pippa'; 
 $_SESSION['item'][$i]['rank'] = 11;
-$_SESSION['item'][$i]['trivia'] = "Hi, my name is Pippa. I love running around in circles, sniffing for cats and sleeping in laps.';
+$_SESSION['item'][$i]['trivia'] = "Hi, my name is Pippa. I love running around in circles, sniffing for cats and sleeping in laps.";
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/pippa.jpg';
 
 $i = 11;
@@ -107,7 +107,7 @@ $i = 13;
 $_SESSION['item'][$i]['name'] = 'duggie';
 $_SESSION['item'][$i]['caption'] = 'Duggie'; 
 $_SESSION['item'][$i]['rank'] = 14;
-$_SESSION['item'][$i]['trivia'] = "Hi, my name is Duggie. I am a free range house and garden bunny, I am as smart and loyal as any cat or dog';
+$_SESSION['item'][$i]['trivia'] = "Hi, my name is Duggie. I am a free range house and garden bunny, I am as smart and loyal as any cat or dog";
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/duggy.jpg';
 
 $i = 15;
