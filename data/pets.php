@@ -108,7 +108,7 @@ $_SESSION['item'][$i]['name'] = 'duggie';
 $_SESSION['item'][$i]['caption'] = 'Duggie'; 
 $_SESSION['item'][$i]['rank'] = 14;
 $_SESSION['item'][$i]['trivia'] = "Hi, my name is Duggie. I am a free range house and garden bunny, I am as smart and loyal as any cat or dog";
-$_SESSION['item'][$i]['filename'] = 'data/images/pets/duggy.jpg';
+$_SESSION['item'][$i]['filename'] = 'data/images/pets/duggie.jpg';
 
 $i = 15;
 $_SESSION['item'][$i]['name'] = 'teacuprex';
