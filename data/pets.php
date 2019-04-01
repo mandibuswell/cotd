@@ -83,11 +83,11 @@ $_SESSION['item'][$i]['trivia'] = "Hi, my name is DeeDee. My master, and I use t
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/deedee.jpg';
 
 $i = 10;
-$_SESSION['item'][$i]['name'] = 'neo';
-$_SESSION['item'][$i]['caption'] = 'Neo'; 
+$_SESSION['item'][$i]['name'] = 'pippa';
+$_SESSION['item'][$i]['caption'] = 'Pippa'; 
 $_SESSION['item'][$i]['rank'] = 11;
-$_SESSION['item'][$i]['trivia'] = "Hi, my name is Neo. So Dad has got all these great photos and picks this one. He reckons I fight too much. But has he ever stopped to think, why? Maybe if he spent more time with me I might be able to work through some of my issues.Like me so I can avoid a life in therapy.";
-$_SESSION['item'][$i]['filename'] = 'data/images/pets/neo.jpg';
+$_SESSION['item'][$i]['trivia'] = "Hi, my name is Pippa. I love running around in circles, sniffing for cats and sleeping in laps.';
+$_SESSION['item'][$i]['filename'] = 'data/images/pets/pippa.jpg';
 
 $i = 11;
 $_SESSION['item'][$i]['name'] = 'capi';
@@ -104,18 +104,18 @@ $_SESSION['item'][$i]['trivia'] = "Hi, my name is Ichibaby. So much going on her
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/ichibaby.jpg';
 
 $i = 13;
-$_SESSION['item'][$i]['name'] = 'milky';
-$_SESSION['item'][$i]['caption'] = 'Milky'; 
+$_SESSION['item'][$i]['name'] = 'duggie';
+$_SESSION['item'][$i]['caption'] = 'Duggie'; 
 $_SESSION['item'][$i]['rank'] = 14;
-$_SESSION['item'][$i]['trivia'] = "Hi, my name is Milky. My mother loves me. I mean she really loves me. Really, really loves me.Like me so I can find some space."; 
-$_SESSION['item'][$i]['filename'] = 'data/images/pets/milky.jpg';
+$_SESSION['item'][$i]['trivia'] = "Hi, my name is Duggie. I am a free range house and garden bunny, I am as smart and loyal as any cat or dog';
+$_SESSION['item'][$i]['filename'] = 'data/images/pets/duggy.jpg';
 
 $i = 15;
-$_SESSION['item'][$i]['name'] = 'cookie';
-$_SESSION['item'][$i]['caption'] = 'Cookie'; 
+$_SESSION['item'][$i]['name'] = 'teacuprex';
+$_SESSION['item'][$i]['caption'] = 'Rex'; 
 $_SESSION['item'][$i]['rank'] = 16; 
-$_SESSION['item'][$i]['trivia'] = "Hi, my name is Cookie. The story of the 21st Century right here. Beauty and love thriving within the external existential threat. Or is it? Maybe Cookie represents the hidden threat that lurks within to steal our personal information? Like me, I don't know the anwser, I'm just a kitten.";
-$_SESSION['item'][$i]['filename'] = 'data/images/pets/cookie.jpg';
+$_SESSION['item'][$i]['trivia'] = "Hi, my name is Rex. The story of the 21st Century right here. Beauty and love thriving within the external existential threat. Or is it? Maybe Cookie represents the hidden threat that lurks within to steal our personal information? Like me, I don't know the anwser, I'm just a puppy in a tea cup.";
+$_SESSION['item'][$i]['filename'] = 'data/images/pets/buswell.jpg';
 
 $i = 16;
 $_SESSION['item'][$i]['name'] = 'taffy';
@@ -125,11 +125,11 @@ $_SESSION['item'][$i]['trivia'] = "Hi, my name is Taffy. I'm glad you swiped thi
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/taffy.jpg';
 
 $i = 17;
-$_SESSION['item'][$i]['name'] = 'charleybilly';
-$_SESSION['item'][$i]['caption'] = 'Charley+Billy'; 
+$_SESSION['item'][$i]['name'] = 'thomas';
+$_SESSION['item'][$i]['caption'] = 'Thomas'; 
 $_SESSION['item'][$i]['rank'] = 18; 
-$_SESSION['item'][$i]['trivia'] = "Hi, our names are Charley and Billy. Help us. We are being manipulated into some kind of cuteness standoff. But The Cavaliers united will never be defeated. Like us and save our dignity.";
-$_SESSION['item'][$i]['filename'] = 'data/images/pets/charleybilly.jpg';
+$_SESSION['item'][$i]['trivia'] = "My name is Thomas. I'm actually quite famous in horse circles. This is, believe me, the height of winter fashion for horses. So there, now give me that treat.";
+$_SESSION['item'][$i]['filename'] = 'data/images/pets/thomas.jpg';
 
 $i = 18;
 $_SESSION['item'][$i]['name'] = 'riki';
@@ -139,10 +139,10 @@ $_SESSION['item'][$i]['trivia'] = "Hi, my name is Riki. Voting is not compulsory
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/riki.jpg';
 
 $i = 14;
-$_SESSION['item'][$i]['name'] = 'billy_2';
-$_SESSION['item'][$i]['caption'] = 'Billy';
+$_SESSION['item'][$i]['name'] = 'buddy';
+$_SESSION['item'][$i]['caption'] = 'buddy';
 $_SESSION['item'][$i]['rank'] = 15;
-$_SESSION['item'][$i]['trivia'] = "Hi, my name is Billy. Frankly the notion that my photo page is being dynamically generated using PHP leaves me speechless. Like where is the error handling, and as for transaction management, well, hum bug. Like me so we can get a real Developer.";
-$_SESSION['item'][$i]['filename'] = 'data/images/pets/billy_2.jpg';
+$_SESSION['item'][$i]['trivia'] = "Hi, my name is Buddy. Frankly the notion that my photo page is being dynamically generated using PHP leaves me speechless. Like where is the error handling, and as for transaction management, well, hum bug. Like me so we can get a real Developer.";
+$_SESSION['item'][$i]['filename'] = 'data/images/pets/buddy.jpg';
 
 ?>
