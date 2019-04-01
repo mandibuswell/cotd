@@ -140,7 +140,7 @@ $_SESSION['item'][$i]['filename'] = 'data/images/pets/riki.jpg';
 
 $i = 14;
 $_SESSION['item'][$i]['name'] = 'buddy';
-$_SESSION['item'][$i]['caption'] = 'buddy';
+$_SESSION['item'][$i]['caption'] = 'Buddy';
 $_SESSION['item'][$i]['rank'] = 15;
 $_SESSION['item'][$i]['trivia'] = "Hi, my name is Buddy. Frankly the notion that my photo page is being dynamically generated using PHP leaves me speechless. Like where is the error handling, and as for transaction management, well, hum bug. Like me so we can get a real Developer.";
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/buddy.jpg';
