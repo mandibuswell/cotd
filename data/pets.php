@@ -133,7 +133,7 @@ $_SESSION['item'][$i]['filename'] = 'data/images/pets/thomas.jpg';
 
 $i = 18;
 $_SESSION['item'][$i]['name'] = 'riki';
-$_SESSION['item'][$i]['caption'] = 'Rikiy'; 
+$_SESSION['item'][$i]['caption'] = 'Riki'; 
 $_SESSION['item'][$i]['rank'] = 19; 
 $_SESSION['item'][$i]['trivia'] = "Hi, my name is Riki. Voting is not compulsory. But consider the consequences when you don't bother. Go on, toss me a few likes. Like me and peace out.";
 $_SESSION['item'][$i]['filename'] = 'data/images/pets/riki.jpg';
