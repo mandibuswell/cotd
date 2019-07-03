@@ -21,7 +21,7 @@ function getRandomWord($len = 10) {
 	return(session_id());
 }
 
-if ($_SERVER['QUERY_STRING']) { 
+if ( isset( $_SERVER['QUERY_STRING'] ) ) { 
 	parse_str($_SERVER['QUERY_STRING']);
 }
 
