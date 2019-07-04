@@ -22,7 +22,7 @@ function getRandomWord($len = 10) {
 }
 
 if ( isset( $_SERVER['QUERY_STRING'] ) ) { 
-	parse_str($_SERVER['QUERY_STRING']);
+	parse_str($_SERVER['QUERY_STRING'], $data);
 }
 
 if ( isset($nextpage) ) { 
