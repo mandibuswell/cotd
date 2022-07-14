@@ -105,7 +105,7 @@ $help = $help."<p style='color:silver;font-size:80%;font-style:italic'> Enjoy, S
 	<script src="js/jquery.js"></script>
 	<script src="js/index.js"></script>
 	<!-- <script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script> -->
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/swipe-page.js"></script>
 	<script src="js/rateThis.js"></script>
 
@@ -168,7 +168,7 @@ cache: false
     <div data-role="footer" data-position="fixed" data-fullscreen="true" data-id="ftr" data-tap-toggle="false">
 		<div class="ui-content" style="background: transaparent !important; text-align:center;" data-mini="true" data-inline="true" style="width: 100px;">			
 			<div class="rate-example" >
-				<input data-role="none" name="ratetest" id="ratetest" type="text" data-mini="true" style="text-align:center; outline:none; border:0; broder-style:none; border-color: transparent !important; border:none!important; box-shadow:none!important;"/>
+				<input data-role="none" name="ratetest" id="ratetest" type="text" data-mini="true" style="text-align:center; outline:none; border:0; border-style:none; border-color: transparent !important; border:none!important; box-shadow:none!important;"/>
 			</div>
 		</div>
 
