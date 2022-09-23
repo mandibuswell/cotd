@@ -12,13 +12,15 @@ Usage:
 EOF
 }
 
-my ($pod) = $ARGV[0];
-die usage unless ($pod);
+die usage unless scalar (@ARGV) > 0;
 
 my $dump;
-{
-    local $/ = undef;
-    $dump = `oc logs $pod`
+
+foreach my $pod (@ARGV) {
+    {
+        local $/ = undef;
+        $dump .= `oc logs $pod`
+    }
 }
 
 my ($fav_by_client, $fav_by_city, $fav_city);
@@ -37,6 +39,7 @@ while( $dump =~ m/] (.{0,35}$string.{0,30}),/gisx ) {
 print "Favourite by client.ip " . Data::Dumper->Dump([$fav_by_client],['$x']);
 print "Favourite by city and client.ip " . Data::Dumper->Dump([$fav_by_city],['$x']);
 print "Favourite by city " . Data::Dumper->Dump([$fav_city],['$x']);
+
 
 #$string = 'Top\ city\ is';
 #while( $dump =~ m/] (.{0,35}$string.{0,30}),/gisx ) {
