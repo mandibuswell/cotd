@@ -1,5 +1,5 @@
 
-# COTD: Cat of the Day
+# Cat/City of the Day
 
 PHP web application using JQuery Mobile that publishes a list of ordered items. 
 Each item has an image and trivia.
@@ -39,7 +39,62 @@ An example entry is as follows:
 
 ## AB Deployment Example
 
-To experiment with an A/B deployment scenario, follow the instructions in the blog entry at: https://blog.emergile.com/2016/10/07/ab-deployments-made-easy-with-openshift/  
+
+To demonstrate AB deployments try the following:
+
+## Setup Environment
+Fork this Git repo
+Visit https://www.openshift.org/vm/ to create an instance of OpenShift 
+
+## Create Project
+Visit the Console at https://10.2.2.2:8443/console/ using credentials user/user
+Create a project called cotd with description "Cat of the Day"
+
+    oc new-project cotd --display-name="City of the day" --description='City of the day'
+
+## Create A Application
+Visit your Git repo and change the data/selector.php to point to "cats"
+Create a php application called cotd1 and point it to this Git repo
+Verify that the application using http://cotd1-cotd.apps.10.2.2.2.xip.io
+
+    oc new-app openshift/php:5.6~https://github.com/eformat/cotd.git#master --name=master
+
+## Create B Application
+Visit your Git repo and change the data/selector.php to point to "cities"
+Create a php application called cotd2 and point it to this Git repo
+Verify that the application using http://cotd2-cotd.apps.10.2.2.2.xip.io
+
+    oc new-app openshift/php:5.6~https://github.com/eformat/cotd.git#feature --name=feature
+
+## Create AB Route Target
+Switch to the Applications > Routes tab in the Console
+Create a route ab pointing to http://ab-cotd.apps.10.2.2.2.xip.io
+
+    oc expose service master --hostname=cotd.192.168.137.2.xip.io --name=cotd
+
+## Change route policy to round robin
+By default the HA proxy router will configure your route for least connection.
+To work correctly with weights, set an annotation so that round robin balancing is used
+
+    oc annotate route/cotd haproxy.router.openshift.io/balance=roundrobin
+
+## Create AB Routing Rule
+From a terminal window issue an $ oc login https://10.2.2.2:8443 with credentials user/user 
+Set the project to cotd using $ oc project cotd
+Create a AB route using the web UI - broswe to cotd Route
+RouteSplit traffic across multiple services
+Verify the AB 50/50 setting in the cotd project
+
+    oc set route-backends routes/cotd master=50 feature=50
+
+You can also incrementally adjust from client
+
+    oc set route-backends routes/cotd --adjust feature=+10%
+
+## Verify AB Behavior
+Launch a a different browser and set cookies preferences to "never allow"
+Open http://ab-cotd.apps.10.2.2.2.xip.io 
+Refresh and note changes between cats and cities versions
 
 ## Running using Docker Toolbox
 
