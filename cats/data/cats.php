@@ -87,9 +87,17 @@ $_SESSION['item'][8]['rating'] = 0;
 $_SESSION['item'][9]['name'] = 'christchurch';
 $_SESSION['item'][9]['rank'] = 10;
 $_SESSION['item'][9]['caption'] = 'Christchurch Cat';
-$_SESSION['item'][9]['trivia'] = "My name is Twizel and I from Christchurch. I had a bit role in the Lord of the Rings trilogy, but so did everyone else.  Like me and we can geek out on LOTR trivia for hours on end. ";
+$_SESSION['item'][9]['trivia'] = "My name is Twizel and I am from Christchurch. I had a bit role in the Lord of the Rings trilogy, but so did everyone else.  Like me and we can geek out on LOTR trivia for hours on end. ";
 $_SESSION['item'][9]['theme'] = 'cats';
 $_SESSION['item'][9]['filename'] = 'data/images/cats/christchurch.jpg';
 $_SESSION['item'][9]['rating'] = 0;
+
+$_SESSION['item'][10]['name'] = 'napier';
+$_SESSION['item'][10]['rank'] = 11;
+$_SESSION['item'][10]['caption'] = 'Napier Cat';
+$_SESSION['item'][10]['trivia'] = "My name is Fluffy and I am from Napier. I love long walks on our beautiful coastline and getting scratches and treats from the freedom campers. When they are not looking I like to steal their wine. ";
+$_SESSION['item'][10]['theme'] = 'cats';
+$_SESSION['item'][10]['filename'] = 'data/images/cats/napier.jpg';
+$_SESSION['item'][10]['rating'] = 0;
 
 ?>
