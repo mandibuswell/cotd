@@ -100,4 +100,11 @@ $_SESSION['item'][10]['theme'] = 'cats';
 $_SESSION['item'][10]['filename'] = 'data/images/cats/napier.jpg';
 $_SESSION['item'][10]['rating'] = 0;
 
+$_SESSION['item'][11]['name'] = 'neighbour';
+$_SESSION['item'][11]['rank'] = 12;
+$_SESSION['item'][11]['caption'] = 'Neighbour's Cat';
+$_SESSION['item'][11]['trivia'] = "I don't live here I live next door. Next door they call me Margot, but here, they spelt my name backwards and they call me Ogram. ";
+$_SESSION['item'][11]['theme'] = 'cats';
+$_SESSION['item'][11]['filename'] = 'data/images/cats/neighbour.jpg';
+$_SESSION['item'][11]['rating'] = 0;
 ?>
