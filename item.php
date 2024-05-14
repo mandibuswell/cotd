@@ -14,7 +14,7 @@ if (! isset( $_SESSION['item']) ) {
 }
 
 // Get random word
-function getRandomWord($len = 10) {
+function getRandomWord($len = sizeof($_SESSION['item'])) {
     $word = array_merge(range('a', 'z'), range('A', 'Z'));
     shuffle($word);
     // return substr(implode($word), 0, $len);
