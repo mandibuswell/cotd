@@ -75,7 +75,7 @@ if ( isset( $favorite ) ) {
 	error_log($logmsg);
 }
 
-$help = "<p>You are looking at a list of ".$_SESSION['SELECTOR'];
+$help = "<p>Hello friend. You are looking at a list of ".$_SESSION['SELECTOR'];
 if ( $_SESSION['SELECTOR'] == "pets" ) {
   $help = $help." from amongst my work colleagues.";
 } else {
