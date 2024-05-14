@@ -92,4 +92,19 @@ $_SESSION['item'][9]['theme'] = 'cats';
 $_SESSION['item'][9]['filename'] = 'data/images/cats/christchurch.jpg';
 $_SESSION['item'][9]['rating'] = 0;
 
+$_SESSION['item'][10]['name'] = 'napier';
+$_SESSION['item'][10]['rank'] = 11;
+$_SESSION['item'][10]['caption'] = 'Napier Cat';
+$_SESSION['item'][10]['trivia'] = "My name is Fluffy and I am from Napier. I love long walks on our beautiful coastline and getting scratches and treats from the freedom campers. When they are not looking I like to steal their wine. ";
+$_SESSION['item'][10]['theme'] = 'cats';
+$_SESSION['item'][10]['filename'] = 'data/images/cats/napier.jpg';
+$_SESSION['item'][10]['rating'] = 0;
+
+$_SESSION['item'][11]['name'] = 'neighbour';
+$_SESSION['item'][11]['rank'] = 12;
+$_SESSION['item'][11]['caption'] = 'Neighbour Cat';
+$_SESSION['item'][11]['trivia'] = "I don't live here I live next door. Next door they call me Margot, but here, they spelt my name backwards and they call me Ogram. ";
+$_SESSION['item'][11]['theme'] = 'cats';
+$_SESSION['item'][11]['filename'] = 'data/images/cats/neighbour.jpg';
+$_SESSION['item'][11]['rating'] = 0;
 ?>
